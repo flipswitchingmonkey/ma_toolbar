@@ -1,0 +1,24 @@
+<!--
+Tool definition file for ma_toolbar
+
+Define a new tool by adding a new tool element like this:
+<tool path="myscript/myscript.jsx" name="My Script" icon="myicon.png"/>
+
+Parameters:
+path: the script's file path relative to the After Effects "Scripts" folder. Use forward slashes to be OS-independent
+label: an arbitraty name you give to the script
+icon: an icon file placed under the res/icons/ folder, 32x32 pixels in size, or a short text to label the button
+width: optional parameter, width of button (defaults to 32)
+
+To add an AE expression instead of a file, leave out the path parameter and instead write your script as text between the <tool></tool> tags.
+-->
+
+<tools>
+    <tool path="ScriptUI Panels/Immigration.jsxbin" label="Immigration" icon="Immi" width="32"/>
+    <tool path="ScriptUI Panels/BG Renderer.jsxbin" label="BG Renderer" icon="BG"/>
+    <tool path="rd_scripts/rd_GimmePropInfo.jsx" label="rd_GimmePropInfo" icon="Prop"/>
+    <tool path="rd_scripts/rd_SimpleConsole.jsx" label="rd_SimpleConsole" icon="Con"/>
+    <tool label="Test Script" icon="icons/default.png">
+        app.executeCommand(app.findMenuCommandId("About After Effects..."));
+    </tool>
+</tools>
